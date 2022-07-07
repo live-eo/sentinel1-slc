@@ -1,4 +1,4 @@
-# Earth On AWS (EOnAWS) - Sentinel1- SLC IW dataset in unzipped form
+# Sentinel1- SLC Germany dataset in unzipped form
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -30,10 +30,10 @@ The Sentinel-1 SLC IW image collection provided by ESA comes in an archive forma
 - Since the dataset resides on S3, depending upon the application, users can also directly read the object into memory and carry out their work without having to download, unzip and store them in on-premise or cloud storages.
 - The S3 bucket and objects in it are public. Anonymous access is also enabled. So users can access the data without aws account/credentials as well.
 
-Currently, we ingest [Sentinel-1A/B Level-1 Interferometric Wideswath(IW) SLC](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-1-sar/products-algorithms/level-1/single-look-complex/interferometric-wide-swath) over [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson) only.
-Our next update will cover Europe and eventually the entire global dataset.
+Currently, we ingest [Sentinel-1A/B Level-1 SLC](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/product-types-processing-levels/level-1) over [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson) only.
+Our next update will cover the larger European region.
 
-The dataset in the S3 bucket is updated in the interval of 6 days, after they are made available by [Alaska Satellite Facility](https://search.asf.alaska.edu/#/).
+The dataset in the S3 bucket was retrieved from the [Alaska Satellite Facility](https://search.asf.alaska.edu/#/) (ASF) servers and is updated in the interval of 6 days, after they are made available by ASF.
 
 <p align="center">
 <img src="https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.png">
