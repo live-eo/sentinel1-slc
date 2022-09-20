@@ -46,14 +46,14 @@ The table below provides information on product details, useful for querying the
 
 ---
 
-s3://sentinel1-slc/**`YYYY`/`MM`/`XXX`\_`BB`\_SLC\_\_1S`PP`\_`YYYYMMDD`T`HHMMSS`\_`yyyymmdd`T`hhmmss`\_`OOOOOO`\_`DDDDDD`\_`CCCC`**.SAFE
+s3://sentinel1-slc/**`YYYY`/`MM`/`DD`/`XXX`\_`BB`\_SLC\_\_1S`PP`\_`YYYYMMDD`T`HHMMSS`\_`yyyymmdd`T`hhmmss`\_`OOOOOO`\_`DDDDDD`\_`CCCC`**.SAFE
 
 ---
 
 Example S3 URI of an imagery: 
 
 ```
-s3://sentinel1-slc/2014/11/S1A_IW_SLC__1SDV_20141101T055027_20141101T055057_003084_003886_5D35.SAFE/
+s3://sentinel1-slc/2022/01/01/S1A_IW_SLC__1SDV_20220101T053305_20220101T053332_041263_04E777_0EE8.SAFE/
 ``` 
 
 ### Contents inside each imagery
@@ -101,20 +101,20 @@ For access without using the aws credentials, simply pass the `--no-sign-request
   aws s3 ls sentinel1-slc
   aws s3 ls sentinel-slc --no-sign-request
   ```
-- To retrieve list of all imagery available for a given year and month:
+- To retrieve list of all imagery available for a given year, month and date:
   ```cmd
-  aws s3 ls sentinel1-slc/2022/01/
-  aws s3 ls sentinel1-slc/2022/01/ --no-sign-request
+  aws s3 ls sentinel1-slc/2022/01/01
+  aws s3 ls sentinel1-slc/2022/01/01 --no-sign-request
   ```
 - To retrieve list of all files and folders inside a given imagery:
   ```cmd
-  aws s3 ls sentinel1-slc/2022/01/S1A_IW_SLC__1SDV_20220130T165313_20220130T165341_041693_04F5EC_074E.SAFE/
-  aws s3 ls sentinel1-slc/2022/01/S1A_IW_SLC__1SDV_20220130T165313_20220130T165341_041693_04F5EC_074E.SAFE/ --no-sign-request
+  aws s3 ls sentinel1-slc/2022/01/01/S1A_IW_SLC__1SDV_20220101T053305_20220101T053332_041263_04E777_0EE8.SAFE/
+  aws s3 ls sentinel1-slc/2022/01/01/S1A_IW_SLC__1SDV_20220101T053305_20220101T053332_041263_04E777_0EE8.SAFE/ --no-sign-request
   ```
 - To retrieve list of all imagery with a given polarization type and mission type:
   ```cmd
-  aws s3 ls sentinel1-slc/2022/01/S1A_IW_SLC__1SDV_
-  aws s3 ls sentinel1-slc/2022/01/S1A_IW_SLC__1SDV_ --no-sign-request
+  aws s3 ls sentinel1-slc/2022/01/01/S1A_IW_SLC__1SDV_
+  aws s3 ls sentinel1-slc/2022/01/01/S1A_IW_SLC__1SDV_ --no-sign-request
   ```
    
 ### Examples with boto3 library
@@ -129,7 +129,7 @@ For access without using the aws credentials, simply pass the `--no-sign-request
   
   s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
   my_bucket = 'sentinel1-slc'
-  file_to_read = '2014/10/S1A_IW_SLC__1SDV_20141003T054235_20141003T054304_002661_002F66_D5C8.SAFE/annotation/s1a-iw1-slc-vh-20141003t054236-20141003t054302-002661-002f66-001.xml'
+  file_to_read = '2022/01/01/S1A_IW_SLC__1SDV_20220101T053305_20220101T053332_041263_04E777_0EE8.SAFE/annotation/s1a-iw1-slc-vh-20220101t053305-20220101t053330-041263-04e777-001.xml'
   
   s3_response_object = s3_client.get_object(Bucket=my_bucket, Key=file_to_read)
   object_content = s3_response_object['Body'].read()
@@ -143,7 +143,7 @@ For access without using the aws credentials, simply pass the `--no-sign-request
   
   client = boto3.client('s3', region_name='eu-west-1')
   my_bucket = 'sentinel1-slc'
-  prefix_to_query = '2021/07/'
+  prefix_to_query = '2022/01/01/'
   results = client.list_objects(Bucket=my_bucket,
                                 Prefix=prefix_to_query,
                                 Delimiter='/'
