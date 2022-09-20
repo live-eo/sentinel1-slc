@@ -103,8 +103,8 @@ For access without using the aws credentials, simply pass the `--no-sign-request
   ```
 - To retrieve list of all imagery available for a given year, month and date:
   ```cmd
-  aws s3 ls sentinel1-slc/2022/01/01
-  aws s3 ls sentinel1-slc/2022/01/01 --no-sign-request
+  aws s3 ls sentinel1-slc/2022/01/01/
+  aws s3 ls sentinel1-slc/2022/01/01/ --no-sign-request
   ```
 - To retrieve list of all files and folders inside a given imagery:
   ```cmd
