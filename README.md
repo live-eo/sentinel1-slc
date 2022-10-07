@@ -30,12 +30,12 @@ The Sentinel-1 SLC IW image collection provided by ESA comes in an archive forma
 - Since the dataset resides on S3, depending upon the application, users can also directly read the object into memory and carry out their work without having to download, unzip and store them in on-premise or cloud storages.
 - The S3 bucket and objects in it are public. Anonymous access is also enabled. So users can access the data without aws account/credentials as well.
 
-Currently, we have fully ingested [Sentinel-1A/B Level-1 SLC](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/product-types-processing-levels/level-1) over [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson), and we are, at the momment, on the process to cover the larger [European region](https://github.com/huynguyenliveeo/sentinel1-slc/blob/main/imagery/europe.geojson). Up to now, around 34.31% of total EU dataset has been made available to the S3 bucket. 
+Currently, we have fully ingested [Sentinel-1A/B Level-1 SLC](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/product-types-processing-levels/level-1) over [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson), and we are, at the momment, on the process to cover the larger [European region](https://github.com/live-eo/earth-on-aws/blob/main/imagery/europe.geojson). Up to now, around 34.31% of total EU dataset has been made available to the S3 bucket. 
 
 The dataset in the S3 bucket was retrieved from the [Alaska Satellite Facility](https://search.asf.alaska.edu/#/) (ASF) servers and is updated in the interval of 6 days, after they are made available by ASF.
 
 <p align="center">
-<img src="https://github.com/huynguyenliveeo/sentinel1-slc/blob/main/imagery/europe.png">
+<img src="https://github.com/live-eo/earth-on-aws/blob/main/imagery/europe.png">
 </p>
 
 ### AWS S3 bucket and object structure
