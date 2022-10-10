@@ -6,6 +6,7 @@
 
 - [Sentinel1-SLC Product description](#sentinel1-slc-product-description)
 - [Dataset in S3 at glance](#dataset-in-s3-at-glance)
+  - [Expanding data scope to EU region (work in progress)](#expanding-data-scope-to-eu-region-work-in-progress)
   - [AWS S3 bucket and object structure](#aws-s3-bucket-and-object-structure)
   - [Contents inside each imagery](#contents-inside-each-imagery)
   - [Sentinel1-SLC IW product naming convention](#sentinel1-slc-iw-product-naming-convention)
