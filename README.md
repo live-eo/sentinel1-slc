@@ -31,13 +31,38 @@ The Sentinel-1 SLC IW image collection provided by ESA comes in an archive forma
 - Since the dataset resides on S3, depending upon the application, users can also directly read the object into memory and carry out their work without having to download, unzip and store them in on-premise or cloud storages.
 - The S3 bucket and objects in it are public. Anonymous access is also enabled. So users can access the data without aws account/credentials as well.
 
-Currently, we have fully ingested [Sentinel-1A/B Level-1 SLC](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/product-types-processing-levels/level-1) over [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson), and we are, at the momment, on the process to cover the larger [European region](https://github.com/live-eo/earth-on-aws/blob/main/imagery/europe.geojson). Up to now, around 34.31% of total EU dataset has been made available to the S3 bucket. 
+We have fully ingested [Sentinel-1A/B Level-1 SLC](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/product-types-processing-levels/level-1) over [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson), which is updated in the interval of 6 days, after they are made available by [Alaska Satellite Facility](https://search.asf.alaska.edu/#/) (ASF).
 
-The dataset in the S3 bucket was retrieved from the [Alaska Satellite Facility](https://search.asf.alaska.edu/#/) (ASF) servers and is updated in the interval of 6 days, after they are made available by ASF.
+
+<p align="center">
+<img src="https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.png">
+</p>
+
+### Expanding data scope to EU region (work in progress)
+
+Following up, as a next step, we aim to expand the service by increasing data coverage across the [Europe region](https://github.com/live-eo/earth-on-aws/blob/main/imagery/europe.geojson). The map below clearly describes the data coverage expansion plan.
 
 <p align="center">
 <img src="https://github.com/live-eo/earth-on-aws/blob/main/imagery/europe.png">
 </p>
+
+The following figure provides an insight of the current percentage of EU dataset uploaded to the S3 bucket. As mentioned above, in addition to [Germany](https://github.com/live-eo/earth-on-aws/blob/main/imagery/germany.geojson), other regions are also being updated simultaneously, however, the process is still in progress with 34.31% of the total EU dataset already available in [sentinel1-slc](https://s3.console.aws.amazon.com/s3/buckets/sentinel1-slc/?region=eu-west-1&tab=objects) S3 bucket.
+
+
+<table align = "center">
+<tr><th>Year</th><th>Percentage of EU dataset in S3</th></tr>
+<tr><td>2014</td><td align = "center">94.55%</td></tr>
+<tr><td>2015</td><td align = "center">66.48%</td></tr>
+<tr><td>2016</td><td align = "center">24.08%</td></tr>
+<tr><td>2017</td><td align = "center">28.33%</td></tr>
+<tr><td>2018</td><td align = "center">29.53%</td></tr>
+<tr><td>2019</td><td align = "center">68.47%</td></tr>
+<tr><td>2020</td><td align = "center">19.80%</td></tr>
+<tr><td>2021</td><td align = "center">17.30%</td></tr>
+<tr><td>2022</td><td align = "center">43.21%</td></tr>
+<tr><td><b>Total</b></td><td align = "center"><b>34.31%</b></td></tr>
+
+</table>
 
 ### AWS S3 bucket and object structure
 
